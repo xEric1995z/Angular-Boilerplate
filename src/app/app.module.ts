@@ -7,6 +7,8 @@ import {
 }   from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
+import { StoreModule } from '@ngrx/store';
+import { addProductReducer } from './store/product.reducer';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -18,7 +20,8 @@ import { AppComponent } from './app.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    StoreModule.forRoot({product: addProductReducer})
   ],
   providers: [],
   bootstrap: [AppComponent]
