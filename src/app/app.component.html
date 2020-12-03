@@ -26,8 +26,5 @@
     <p>{{post.content}}</p>
   </div>
 </form>
-<button (click)="addProduct()">Add Product</button>
-<div *ngFor="let product of products | async">
-  <p>{{product.name}}</p>
-  <p>{{product.price}}</p>
-</div>
+<app-product></app-product>
+<app-product-list></app-product-list>

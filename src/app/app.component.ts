@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { ApiService } from "./services/api.service";
-import { Store } from '@ngrx/store';
-import { Observable } from 'rxjs';
-import { Product } from './interfaces/product.interface';
 
 @Component({
   selector: 'app-root',
@@ -13,37 +10,24 @@ import { Product } from './interfaces/product.interface';
 export class AppComponent implements OnInit {
   title = 'angular10';
   postForm;
-  postsAry = [];
+  postsAry: PostData[] = [];
   errorMsg = {
     title: '',
     content: ''
   };
-  products: Observable<Product[]>;
 
   constructor(
     private formBuilder: FormBuilder,
     private api: ApiService,
-    private store: Store<any>
   ) {
     this.postForm = this.formBuilder.group({
       title: ['', [Validators.required, Validators.maxLength(5)]],
       content: ['', [Validators.required, Validators.minLength(5)]]
     });
-    this.products = this.store.select(state => state.product);
   }
 
   ngOnInit() {
     this.getPosts();
-  }
-
-  addProduct() {    
-    this.store.dispatch({
-      type: 'ADD_PRODUCT',
-      payload: <Product>{
-        name: 'First',
-        price: 123
-      }
-    });
   }
 
   getPosts() {

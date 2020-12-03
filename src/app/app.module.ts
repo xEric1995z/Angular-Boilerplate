@@ -10,10 +10,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { StoreModule } from '@ngrx/store';
 import { addProductReducer } from './store/product.reducer';
 import { AppComponent } from './app.component';
+import { ProductComponent } from './components/product/product.component';
+import { ProductListComponent } from './components/product-list/product-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    ProductComponent,
+    ProductListComponent
   ],
   imports: [
     BrowserModule,
