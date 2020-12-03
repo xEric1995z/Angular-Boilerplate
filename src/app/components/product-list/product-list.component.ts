@@ -14,7 +14,7 @@ export class ProductListComponent implements OnInit {
   constructor(
     private store: Store<any>
   ) {
-    this.products = this.store.select(state => state.product);
+    this.products = this.store.select(state => state.product);    
   }
 
   ngOnInit(): void {

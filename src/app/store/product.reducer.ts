@@ -1,5 +1,4 @@
 import { Product } from '../interfaces/product.interface';
-import { Action } from '@ngrx/store';
 
 export const ADD_PRODUCT = 'ADD_PRODUCT';
 

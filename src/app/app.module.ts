@@ -14,7 +14,6 @@ import { AppComponent } from './app.component';
 import { ProductComponent } from './components/product/product.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { LoginComponent } from './pages/login/login.component';
 import { DashboardModule } from './pages/dashboard/dashboard.module'
 
 @NgModule({
@@ -22,7 +21,6 @@ import { DashboardModule } from './pages/dashboard/dashboard.module'
     AppComponent,
     ProductComponent,
     ProductListComponent,
-    LoginComponent,    
   ],
   imports: [
     BrowserModule,
