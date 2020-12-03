@@ -1,0 +1,55 @@
+p {
+   text-transform: uppercase;
+}
+
+.txt-lg {
+   font-size: 28px;
+   font-size: 1.75rem;
+}
+
+.txt-med {
+   font-size: 24px;
+   font-size: 1.5rem;
+}
+
+.txt-sm {
+   font-size: 20px;
+   font-size: 1.25rem;
+}
+
+  //portrait tablet
+@media screen and (max-width: 800px)  {
+   .txt-lg {
+   font-size: 21px;
+   font-size: 1.75rem;
+   }
+
+   .txt-med {
+   font-size: 18px;
+   font-size: 1.5rem;
+   }
+   
+   .txt-sm {
+   font-size: 15px;
+   font-size: 1.25rem;
+   }
+}
+
+//landscape tablet
+@media screen and (min-width: 800px) and (max-width: 1200px) {
+   .txt-lg {
+      font-size: 24.5px;
+      font-size: 1.75rem;
+   }
+
+   .txt-med {
+      font-size: 21px;
+      font-size: 1.5rem;
+   }
+   
+   .txt-sm {
+      font-size: 17.5px;
+      font-size: 1.25rem;
+   }    
+}
+

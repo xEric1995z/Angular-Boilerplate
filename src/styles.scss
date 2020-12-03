@@ -1,1 +1,31 @@
-/* You can add global styles to this file, and also import other style files */
+@import './app/styles/text.scss';
+
+html, body { 
+   height: 100%; 
+   font-size: 16px;
+}
+body { 
+   margin: 0; 
+   font-family: Roboto, "Helvetica Neue", sans-serif; 
+}
+
+
+//portrait tablet
+@media screen and (max-width: 800px)  {
+  html {
+    font-size: 12px;
+  }
+  body {
+    background-color: honeydew;
+  }
+}
+
+//landscape tablet
+@media screen and (min-width: 800px) and (max-width: 1200px) {
+  html {
+    font-size: 14px;   
+  }
+  body {
+     background-color: lavenderblush;
+  }
+}
