@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { ApiService } from "./services/api.service";
 
 @Component({
   selector: 'app-root',
@@ -18,7 +17,6 @@ export class AppComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private api: ApiService,
   ) {
     this.postForm = this.formBuilder.group({
       title: ['', [Validators.required, Validators.maxLength(5)]],
@@ -27,14 +25,6 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getPosts();
-  }
-
-  getPosts() {
-    this.api.getPosts().subscribe(
-      (data: any) => {this.postsAry = data.posts},
-      error => console.log('Get Error', error)
-    )
   }
 
   _initErrorMsg() {
@@ -66,12 +56,8 @@ export class AppComponent implements OnInit {
     const { title, content } = this.errorMsg;
     this._formChecking(postData);
     if ((title&&content) === '') {
-      this.api.addPosts(postData).subscribe(
-        data => {
-          alert(data.message);
-        },
-        error => console.log('Post Error', error)
-      )
+      console.log('hello');
+      
       this.postForm.reset();
     }
   }
