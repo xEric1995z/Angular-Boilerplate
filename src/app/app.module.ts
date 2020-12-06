@@ -14,7 +14,6 @@ import { AppComponent } from './app.component';
 import { ProductComponent } from './components/product/product.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { DashboardModule } from './pages/dashboard/dashboard.module'
 
 @NgModule({
   declarations: [
@@ -31,8 +30,7 @@ import { DashboardModule } from './pages/dashboard/dashboard.module'
     MaterialModule,
     ReactiveFormsModule,
     StoreModule.forRoot({product: addProductReducer}),
-    BrowserAnimationsModule,
-    DashboardModule
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
