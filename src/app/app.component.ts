@@ -7,6 +7,8 @@ import { FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+  isOpenList = false;
+  isOpenPanel = false;
   title = 'angular10';
   postForm;
   postsAry: PostData[] = [];

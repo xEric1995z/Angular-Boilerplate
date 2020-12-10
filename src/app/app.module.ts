@@ -11,10 +11,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthModule } from "./auth/auth.module";
+import { TextHighlightDirective } from "./shared/text-highlight.directive";
+import { BetterHighlightDirective } from "./shared/better-highlight.directive";
+import { TogglePopupDirective } from './shared/toggle-popup.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TextHighlightDirective,
+    BetterHighlightDirective,
+    TogglePopupDirective,
   ],
   imports: [
     BrowserModule,
